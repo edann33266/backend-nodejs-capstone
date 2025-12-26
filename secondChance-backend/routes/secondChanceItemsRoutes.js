@@ -75,7 +75,6 @@ router.post('/', upload.single('file'), async (req, res, next) => {
     next(e)
   }
 })
-
 // Update an existing item
 router.put('/:id', async (req, res, next) => {
   try {
