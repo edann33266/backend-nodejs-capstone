@@ -61,7 +61,7 @@ router.post('/', upload.single('file'), async (req, res, next) => {
     const collection = db.collection('secondChanceItems')
 
     const lastItemQuery = await collection.find().sort({ id: -1 }).limit(1)
-    let secondChanceItem = req.body
+    const secondChanceItem = req.body
 
     await lastItemQuery.forEach((item) => {
       secondChanceItem.id = (parseInt(item.id) + 1).toString()
