@@ -30,3 +30,4 @@ jobs:
           find ./secondChance-backend -name index.js -exec ./node_modules/.bin/eslint -c .eslintrc.js {} +
           find ./sentiment -name index.js -exec ./node_modules/.bin/eslint -c .eslintrc.js {} +
           echo "Linted all the js files successfully"
+          
